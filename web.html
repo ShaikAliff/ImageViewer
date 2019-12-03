@@ -1,0 +1,214 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Image Viewer</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/carousel/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        <!-- Favicons -->
+    <meta name="theme-color" content="#563d7c">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+
+    <script type="text/javascript">
+
+    $(document).ready(function (){
+        var i1 = getRandomInt(151,204);
+        var i2 = getRandomInt(151,204);
+        var i3 = getRandomInt(151,204);
+        var i4 = getRandomInt(151,204);
+        var i5 = getRandomInt(151,204);
+        var i6 = getRandomInt(151,204);
+        console.log(i1);
+        console.log(i2);
+        console.log(i3); 
+        console.log(i4);
+        console.log(i5);
+        console.log(i6);
+
+        $("#img1").attr("src", "https://picsum.photos/300/200?image="+i1);
+
+        $("#img2").attr("src", "https://picsum.photos/300/200?image="+i2);
+        
+        $("#img3").attr("src", "https://picsum.photos/300/200?image="+i3);
+
+        $("#img4").attr("src", "https://picsum.photos/300/200?image="+i4);
+
+        $("#img5").attr("src", "https://picsum.photos/300/200?image="+i5);
+
+        $("#img6").attr("src", "https://picsum.photos/300/200?image="+i6);
+    })
+
+        function getRandomInt(min, max) 
+        {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function validate() 
+        {
+            if (document.getElementById('image1').checked) {
+                // alert("checked 1");
+                $("#img1").attr("src", "https://picsum.photos/300/200?image="+getRandomInt(151,204));
+            } 
+
+            if (document.getElementById('image2').checked) {
+                $("#img2").attr("src", "https://picsum.photos/300/200?image="+getRandomInt(151,204));
+            } 
+            
+            if (document.getElementById('image3').checked) {
+                $("#img3").attr("src", "https://picsum.photos/300/200?image="+getRandomInt(151,204));
+            } 
+
+            if (document.getElementById('image4').checked) {
+                $("#img4").attr("src", "https://picsum.photos/300/200?image="+getRandomInt(151,204));
+            }
+
+            if (document.getElementById('image5').checked) {
+                $("#img5").attr("src", "https://picsum.photos/300/200?image="+getRandomInt(151,204));
+            }
+
+            if (document.getElementById('image6').checked) {
+                $("#img6").attr("src", "https://picsum.photos/300/200?image="+getRandomInt(151,204));
+            } 
+
+            if( document.getElementById('image1').checked == false &&
+                document.getElementById('image2').checked == false &&
+                document.getElementById('image3').checked == false &&
+                document.getElementById('image4').checked == false &&
+                document.getElementById('image5').checked == false &&
+                document.getElementById('image6').checked == false )
+                { alert("Please check any of the images to change it.");}
+
+
+            // clearCheck();   
+        }
+    
+
+        function clearCheck()
+        {
+            document.getElementById('image1').checked = false;
+            document.getElementById('image2').checked = false;
+            document.getElementById('image3').checked = false;
+            document.getElementById('image4').checked = false;
+            document.getElementById('image5').checked = false;
+            document.getElementById('image6').checked = false;
+
+        }
+    
+        function change()
+        {
+            var image = document.getElementById('image100');
+            image.src = "https://picsum.photos/300/200?random";
+            var test = Math.floor(Math.random() * 1001)
+            console.log(test);
+            // change();
+        }
+        
+        $(document).on('click','btnChange',function (e)
+        {
+           validate();
+        })
+
+        function startTime() {
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('clock').innerHTML =
+        h + ":" + m + ":" + s;
+        var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+        }
+
+        
+    </script>
+
+    </head>
+<body onload="startTime()">
+    <header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Image Viewer</a>
+    <a class="navbar-brand mr-auto" href="#" >Home</a>
+    <a id="clock" class="navbar-brand mt-2 mt-md-0" ></a>
+    
+  </nav>
+</header>
+<div id="top-image"></div>
+
+    <main role="main" >
+    ================================================== -->
+    <div class="container marketing" >
+        <div class="cards">
+            <div class="card">
+                <img id="img1" class="img-fluid" src="">
+                <!-- <p><input type="checkbox" id="image1" /> Select Image </p> -->
+                    <input type="checkbox" id="image1" name="image-1" value="Image1"><label for="image1">Select Image</label>
+            </div>
+            <div class="card">
+                <img id="img2" class="img-fluid" src="">
+                <input type="checkbox" id="image2" name="image-2" value="Image2"><label for="image2">Select Image</label>
+            </div>
+            <div class="card">
+                <img id="img3" class="img-fluid" src="">
+                <input type="checkbox" id="image3" name="image-3" value="Image3"><label for="image3">Select Image</label>
+            </div>
+            <div class="card">
+                <img id="img4" class="img-fluid" src="">
+                <input type="checkbox" id="image4" name="image-4" value="Image4"><label for="image4">Select Image</label>
+            </div>
+            <div class="card">
+                <img id="img5" class="img-fluid" src="">
+                <input type="checkbox" id="image5" name="image-5" value="Image5"><label for="image5">Select Image</label>
+            </div>
+            <div class="card">
+                <img id="img6" class="img-fluid" src="">
+                <input type="checkbox" id="image6" name="image-6" value="Image6"><label for="image6">Select Image</label>
+            </div>
+        </div>
+
+        <div class="buttonDiv">
+            <button id="btnChange" type="button" class="btn btn-primary" onclick="validate()">Change Image</button>
+            <p class="getPicsum">Images from <a class="getPicsumText" href="https://picsum.photos/">Picsum.Photos</a></p>
+
+        </div>
+
+    </div><!-- /.container -->
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div  class ="footerDiv">
+            <p >Created by  <a class="no-underline"  href="https://www.linkedin.com/in/shaik-aliff-faisal-shaik-mohamed-nasir-4632b4158">
+                 Shaik Aliff Faisal  </a><i class="fa">&#xf08c;</i></p>
+        </div>
+    </footer>
+    </main>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="/docs/4.4/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+    </body>
+</html>

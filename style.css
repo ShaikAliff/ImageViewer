@@ -1,0 +1,271 @@
+<style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+        .footer 
+        {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgb(52, 58, 64);
+            color: white;
+            text-align: center;
+        }
+        
+        .cards {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        
+        }
+
+        .card {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        margin-left: 22px;
+        margin-bottom: 3em;
+
+        }
+
+        .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        .container {
+        padding: 2px 16px;
+        margin-top: 5em; 
+        text-align:center; 
+        vertical-align: middle; 
+        width: 100%; 
+        }
+
+        .buttonDiv
+        {
+            padding-top: 2em; 
+            padding-bottom: 5em;
+        }
+
+        .no-underline
+        {
+            color: white;
+        }
+
+        .footerDiv
+        {
+            padding-top: 0.5em;
+        }
+
+        .fa
+        {
+            font-size:24px;
+        }
+
+        .getPicsum
+        {
+            padding-top: 1em;
+        }
+
+        .getPicsumText
+        {
+            color: black;
+        }
+        
+        /* iphone5*/
+        @media screen and (min-width: 300px)  and (max-width: 320px)
+        {
+            
+            .cards
+            {
+                margin-left: 0px;
+            }
+            .container 
+            {
+                margin-left:6.5em;
+            }
+
+        }
+
+        
+
+        @media screen and (min-width: 321px)  and (max-width: 370px) 
+        {
+            body
+            {
+                display: block;
+                width: 100%;                
+                margin: auto; 
+                text-align:center; 
+                /* padding-left: 10em; */
+            }
+            .cards 
+            {
+                width: 100%;
+                max-width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .card {
+                width: 100%;
+                max-width: 100%;
+                margin-top: 18px;
+                border-radius: 5px;
+            }
+            .container 
+            {
+                margin-left: 5.5em;
+            }
+        }
+
+        @media screen and (min-width: 375px)  and (max-width: 410px) 
+        {
+            .container 
+            {
+                margin-left: 5em;
+            }
+        }
+
+        @media screen and (min-width: 411px)  and (max-width: 420px) 
+        {
+            .container 
+            {
+                margin-left: 4em;
+            }
+        }
+
+
+
+
+        /* ipadPro */
+        @media screen and (min-width: 1020px)  and (max-width: 1900px)
+        {
+            .cards 
+            {
+                /* margin-left: 6em; */
+                margin:0 auto;
+            }
+  
+        }
+
+        input[type=checkbox] + label {
+        display: block;
+        margin: 0.2em;
+        cursor: pointer;
+        padding: 0.2em;
+        content: "\2714";
+
+        
+        }
+
+
+        input[type=checkbox] {
+        display: none;
+        }
+
+        input[type=checkbox] + label:before {
+        content: "\2714";
+        border: 0.1em solid #000;
+        border-radius: 0.2em;
+        display: inline-block;
+        width: 1.5em;
+        height: 1.5em;
+        /* padding-left: 0.2em; */
+        padding-bottom: 0.3em;
+        margin-right: 0.4em;
+        vertical-align: middle;
+        color: transparent;
+        transition: .2s;
+        }
+
+        input[type=checkbox] + label:active:before {
+        transform: scale(0);
+        }
+
+        input[type=checkbox]:checked + label:before {
+        background-color: MediumSeaGreen;
+        border-color: MediumSeaGreen;
+        color: #fff;
+        }
+
+        input[type=checkbox]:disabled + label:before {
+        transform: scale(1);
+        border-color: #aaa;
+        }
+
+        input[type=checkbox]:checked:disabled + label:before {
+        transform: scale(1);
+        background-color: #bfb;
+        border-color: #bfb;
+        }
+
+        .btn-primary
+        {
+            width: 10em;
+            height: 3em;
+            font-size: 20px;
+            background: transparent;
+            border: 2px black solid;
+            color: black;
+            border-radius: 0;
+            box-shadow: none;
+
+        }
+
+        .btn-primary:hover
+        {
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px  rgba(0, 0, 0, 1) solid;
+            color:  white
+        }
+
+        .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+        .show > .btn-primary.dropdown-toggle {
+            background: rgba(0, 0, 0, 0.5);
+            border: 2px  rgba(0, 0, 0, 1) solid;
+            color:  white
+        }
+
+        .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+        .show > .btn-primary.dropdown-toggle:focus {
+        box-shadow: none;
+        }
+
+        .btn-primary:focus {
+            color: black;
+            background: transparent;
+            border: 2px black solid;
+            box-shadow: none;
+        }
+
+        .btn-primary.disabled, .btn-primary:disabled {
+        color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;
+        }
+
+        #top-image {
+        background:url('https://s3.amazonaws.com/mk-website-media/wp-content/uploads/2018/10/18235758/Wallpaper-Kemra-SoftWhiteBricks-1.jpg') -25px -50px;
+        position:fixed ;
+        top:0;
+        width:100%;
+        z-index:-999;
+        height:100%;
+        background-size: calc(100% + 50px);
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+        }
+
+
+    </style>
